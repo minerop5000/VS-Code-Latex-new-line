@@ -10,11 +10,9 @@ function activate(context) {
   let disposable = vscode.commands.registerCommand(
     "latex-new-line.new-line",
     function () {
-      vscode.window.showInformationMessage("new line!");
       const fileExtension = vscode.window.activeTextEditor.document.fileName
         .split(".")
         .pop();
-      console.log("\\\\");
       if (fileExtension == "tex") {
         vscode.window.activeTextEditor.insertSnippet(
           new vscode.SnippetString("\\\\\\\n")

@@ -1,4 +1,4 @@
-const vscode = require('vscode');
+const vscode = require("vscode");
 
 // this method is called when your extension is activated
 // your extension is activated the very first time the command is executed
@@ -7,28 +7,29 @@ const vscode = require('vscode');
  * @param {vscode.ExtensionContext} context
  */
 function activate(context) {
+  let disposable = vscode.commands.registerCommand(
+    "latex-new-line.new-line",
+    function () {
+      vscode.window.showInformationMessage("new line!");
+      const fileExtension = vscode.window.activeTextEditor.document.fileName
+        .split(".")
+        .pop();
+      console.log("\\\\");
+      if (fileExtension == "tex") {
+        vscode.window.activeTextEditor.insertSnippet(
+          new vscode.SnippetString("\\\\\\\n")
+        );
+      }
+    }
+  );
 
-	// Use the console to output diagnostic information (console.log) and errors (console.error)
-	// This line of code will only be executed once when your extension is activated
-	console.log('Congratulations, your extension "latex-new-line" is now active!');
-
-	// The command has been defined in the package.json file
-	// Now provide the implementation of the command with  registerCommand
-	// The commandId parameter must match the command field in package.json
-	let disposable = vscode.commands.registerCommand('latex-new-line.helloWorld', function () {
-		// The code you place here will be executed every time your command is executed
-
-		// Display a message box to the user
-		vscode.window.showInformationMessage('Hello World from Latex new line!');
-	});
-
-	context.subscriptions.push(disposable);
+  context.subscriptions.push(disposable);
 }
 
 // this method is called when your extension is deactivated
 function deactivate() {}
 
 module.exports = {
-	activate,
-	deactivate
-}
+  activate,
+  deactivate,
+};

@@ -2,7 +2,10 @@
 	"name": "latex-new-line",
 	"displayName": "Latex new line",
 	"description": "",
-	"version": "0.0.1",
+	"version": "0.1.0",
+	"repository": {
+		"url": "https://github.com/minerop5000/VS-Code-Latex-new-line"
+	},
 	"engines": {
 		"vscode": "^1.64.0"
 	},

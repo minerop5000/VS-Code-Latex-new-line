@@ -17,6 +17,10 @@ function activate(context) {
         vscode.window.activeTextEditor.insertSnippet(
           new vscode.SnippetString("\\\\\\\n")
         );
+      } else {
+        vscode.window.activeTextEditor.insertSnippet(
+          new vscode.SnippetString("\n")
+        );
       }
     }
   );

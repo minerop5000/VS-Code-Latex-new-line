@@ -8,8 +8,9 @@ Shift + enter for a new line with \\\\
 
 ## Release Notes
 
-Users appreciate release notes as you update your extension.
-
-### 1.0.0
+### 0.3.0
+- stable release
+- now supporting more vs code versions
+### 0.1.0
 
 Initial release

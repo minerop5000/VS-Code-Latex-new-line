@@ -3,7 +3,7 @@
 	"displayName": "Latex new line",
 	"description": "Insert double backslash for new line with shift+enter",
 	"publisher": "Minerop",
-	"version": "0.3.0",
+	"version": "0.3.1",
 	"icon": "images/logo.png",
 	"repository": {
 		"url": "https://github.com/minerop5000/VS-Code-Latex-new-line"

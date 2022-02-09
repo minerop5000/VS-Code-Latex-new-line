@@ -1,7 +1,7 @@
 {
 	"name": "latex-new-line",
 	"displayName": "Latex new line",
-	"description": "",
+	"description": "Insert double backslash for new line with shift+enter",
 	"publisher": "Minerop",
 	"version": "0.3.0",
 	"icon": "images/logo.png",
